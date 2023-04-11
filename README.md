@@ -1,6 +1,10 @@
 <div align="center">
 
-# View GitHub Repository
+# View GitHub Repository with Sourcegraph
+
+based on [View GitHub Repository](https://github.com/tjx666/view-github-repository/)
+
+# Raw Readme.md
 
 Open npm package GitHub repository straight from VSCode.
 

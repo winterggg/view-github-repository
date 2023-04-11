@@ -43,7 +43,12 @@ export default async function viewGithubRepository(moduleNames: string | string[
             const repositoryURL = await fetchNpmPackageRepository(selectedModuleName);
 
             if (repositoryURL) {
-                open(repositoryURL);
+                // https://github.com/winterggg/view-github-repository or https://github.com/winterggg/view-github-repository/... => https://sourcegraph.com/github.com/winterggg/view-github-repository
+                const sourcegraphURL = repositoryURL.replace(
+                    /https?:\/\/github\.com\/([^/]+\/[^/]+)(\/.*)?/,
+                    'https://sourcegraph.com/github.com/$1',
+                );
+                open(sourcegraphURL);
             } else {
                 vscode.window.showErrorMessage(
                     `can't resolve the github repository of module ${selectedModuleName}!`,

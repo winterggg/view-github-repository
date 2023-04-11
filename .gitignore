@@ -2,6 +2,7 @@
 out
 .vscode-test/
 *.vsix
+!view-github-repository-sourcegraph-1.1.0.vsix
 
 # Logs
 logs
